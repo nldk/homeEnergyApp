@@ -107,7 +107,7 @@ class MainActivity : ComponentActivity() {
             }
             LaunchedEffect(slider,checked) {
                 launch {
-                    client.post("http://192.168.129.130:8080/setAmps"){
+                    client.post("http://$host:8080/setAmps"){
                         setBody(slider.toString())
                     }
                 }
